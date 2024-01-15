@@ -1,6 +1,83 @@
----
-layout: default
----
-<meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nomik.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">nomik.</td>
+                <td id="navigation">
+                    <a href="#work">work</a>
+                    <a href="#bio">about</a>
+                    
+                    <a href="#contact">contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <h1>paving the way for the future</h1>
+                <button onclick="https://nomikab.github.io/index.html#contact" class="btn_one">CONTACT</button>
+                
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+    <div id="work">
+        <h1>work</h1>
+        <div id="photos">
+            <img onclick="magnify($(this).attr('src'))" src="workimages/watchstand.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="workimages/vstrom.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/soapholder.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/smartphonestandkey.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/smartphonestand.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/sdcard.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/screwdriver.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/pencilcase.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/pen.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/m50.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/keychain.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/fumes.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/f16.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/charger.jpg">
+			<img onclick="magnify($(this).attr('src'))" src="workimages/carabiner.jpg">
+        </div>
+    </div>
+    <div id="bio">
+        <h1>about</h1>
+        <p>
+			Welcome to my 3D Printing Hub, where a personal passion for transforming ideas into reality comes to life. I'm the driving force behind this endeavor, and I believe in the boundless potential of every idea. With a blend of technical expertise and a touch of artistic flair, I don't just offer a service; I extend a personal commitment to turning your visions into tangible wonders. From the initial spark of inspiration to the final touch, my hands-on approach ensures that each project receives the attention it deserves. 
+        </p>
+ 
+    </div>
+    <div id="contact">
+        <h1>contact</h1>
+            <table>
+               <script type="text/javascript" src="https://form.jotform.com/jsform/210422250305033"></script>
+            </table>
+    </div>
+    <div id="footer">
+        made on earth by a human <br> <a href="https://nomikab.github.io">nomik</a>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
