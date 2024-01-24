@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 
 <html>
-
-
 <head>
-
-
-<meta property="og:title" content="3D Printing Services">
-<meta property="og:site_name" content="3DPrintCraft">
-<meta property="og:url" content=3dprintcraft.gr>
-<meta property="og:description" content="Turning Ideas into Reality">
-<meta property="og:type" content=website>
-<meta property="og:image" content="https://3dprintcraft.gr/20240123_233347_0003.png">
-
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="3D Printing Services">
+	<meta property="og:site_name" content="3DPrintCraft">
+	<meta property="og:url" content=3dprintcraft.gr>
+	<meta property="og:description" content="Turning Ideas into Reality">
+	<meta property="og:type" content=website>
+	<meta property="og:image" content="https://3dprintcraft.gr/20240123_233347_0003.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3DPrintCraft</title>
 
-  <!-- 
-    - favicon
-  -->
+<!-- favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
-    - custom css link
-  -->
+<!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
-    - google font link
-  -->
+<!-- google font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -40,37 +29,23 @@
 
 <body id="top" class="light_theme">
 
+<script> function ready() { $('[lang]').hide(); $('[lang="gr"]').show(); themeToggleBtn.classList.add("active");} document.addEventListener("DOMContentLoaded", ready); </script>
 
-
-<script>
-  function ready() {
-       $('[lang]').hide();
-	$('[lang="gr"]').show();
-	themeToggleBtn.classList.add("active");
-  }
-
-  document.addEventListener("DOMContentLoaded", ready);
-</script>
-
-  <!-- 
-    - #HEADER
-  -->
+<!-- #HEADER -->
 
   <header class="header" data-header>
     <div class="container">
 
-      <h1 class="h1 logo">
-        <a href="#">3DPrintCraft<span>.</span></a>
-      </h1>
+      <h1 class="h1 logo">  <a href="#">3DPrintCraft<span>.</span></a>  </h1>
 
       <div class="navbar-actions">
 
-        <select name="language" id="lang-switch">
+       <select name="language" id="lang-switch">
           <option value="gr">&#x1f1ec;&#x1f1f7;</option>
           <option value="en">&#x1f1fa;&#x1f1f8;</option>
-        </select>
+       </select>
 
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 $('[lang]').hide(); // hide all lang attributes on start.
 $('[lang="gr"]').show(); // show just Korean text (you can change it)
@@ -92,12 +67,7 @@ $('#lang-switch').change(function () { // put onchange event when user select op
 });
 </script>
 
-
-
-
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-          <span class="icon"></span>
-        </button>
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn> <span class="icon"></span> </button>
 
       </div>
 
@@ -109,8 +79,6 @@ $('#lang-switch').change(function () { // put onchange event when user select op
 
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
-
-
 
           <li>
             <a  href="#home" class="navbar-link">
@@ -146,16 +114,10 @@ $('#lang-switch').change(function () { // put onchange event when user select op
     </div>
   </header>
 
-
-
-
-
   <main>
     <article class="container">
 
-      <!-- 
-        - #HERO
-      -->
+<!-- #HERO -->
 
       <section class="hero" id="home">
 
@@ -164,7 +126,7 @@ $('#lang-switch').change(function () { // put onchange event when user select op
           <picture>
             <source srcset="./assets/images/hero-banner.png" media="(min-width: 768px)">
             <source srcset="./assets/images/hero-banner-md.png" media="(min-width: 500px)">
-            <img src="./assets/images/hero-banner-sm.png" alt=""
+            <img src="./assets/images/hero-banner-sm.png"  
               class="w-100">
           </picture>
 
@@ -172,14 +134,12 @@ $('#lang-switch').change(function () { // put onchange event when user select op
 
         <div class="hero-content">
 
-
-		 <span lang="gr"><h2 class="h2 hero-title">Σχεδιάζουμε με ακρίβεια, εκτυπώνουμε με πάθος </h2></span>
-		 <span lang="en"><h2 class="h2 hero-title">We design with precision, print with passion </h2></span>
+		<span lang="gr"><h2 class="h2 hero-title">Σχεδιάζουμε με ακρίβεια, εκτυπώνουμε με πάθος </h2></span>
+		<span lang="en"><h2 class="h2 hero-title">We design with precision, print with passion </h2></span>
           
 		<span lang="gr"><a href="#contact" class="btn btn-primary">ΕΠΙΚΟΙΝΩΝΙΑ</a></span>
 		<span lang="en"><a href="#contact" class="btn btn-primary">Get in touch</a></span>
           
-
         </div>
 
         <ul class="hero-social-list">
@@ -192,21 +152,13 @@ $('#lang-switch').change(function () { // put onchange event when user select op
             </a>
           </li>
 
-     
-
         </ul>
 
         <a href="#stats" class="scroll-down">Scroll</a>
 
       </section>
 
-
-
-
-
-      <!-- 
-        - #STATS
-      -->
+<!-- #STATS-->
 
       <section class="stats" id="stats">
         <ul class="stats-list">
@@ -267,18 +219,12 @@ $('#lang-switch').change(function () { // put onchange event when user select op
         </ul>
       </section>
 
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
+      <!-- #ABOUT -->
 
       <section class="about" id="about">
 
         <figure class="about-banner">
-          <img src="./assets/images/about-banner.png" alt=""
+          <img src="./assets/images/about-banner.png"  
             class="w-100">
         </figure>
 
@@ -292,23 +238,20 @@ $('#lang-switch').change(function () { // put onchange event when user select op
 
           <p class="section-text">
             <span lang="gr">
-<b>Το ταξίδι μας στην τρισδιάστατη εκτύπωση:</b>
-Αυτό που ξεκίνησε ως χόμπι έχει εξελιχθεί σε μια αφοσιωμένη επιδίωξη αριστείας στη δημιουργία περίπλοκων και καινοτόμων έργων.
-
-<br><b>Γιατί η τρισδιάστατη εκτύπωση έχει σημασία:</b>
-Σε έναν κόσμο που καθοδηγείται από την καινοτομία, η τρισδιάστατη εκτύπωση βρίσκεται στην πρώτη γραμμή των τεχνολογικών εξελίξεων. Μας επιτρέπει να γεφυρώσουμε το χάσμα μεταξύ φαντασίας και δημιουργίας, μετατρέποντας τις έννοιες σε φυσικά αντικείμενα με ακρίβεια και λεπτομέρεια.
-
-<br><b>Η δέσμευσή μας:</b>
-Αυτό που μας κάνει να ξεχωρίζουμε είναι η δέσμευσή μας στην ποιότητα, τη δημιουργικότητα και την εξατομικευμένη εξυπηρέτηση. Κάθε έργο που αναλαμβάνουμε προσεγγίζεται με σχολαστική προσοχή στη λεπτομέρεια, διασφαλίζοντας ότι το τελικό αποτέλεσμα ξεπερνά τις προσδοκίες.
-
- </span>
-			<span lang="en"><b>Our journey into 3D printing:</b>
-What started as a hobby has evolved into a dedicated pursuit of excellence in creating complex and innovative projects.
-
-<br><b>Why 3D printing matters:</b>
-In a world driven by innovation, 3D printing is at the forefront of technological advances. It allows us to bridge the gap between imagination and creation, turning concepts into physical objects with precision and detail.
-<br><b>Our commitment:</b>
-What sets us apart is our commitment to quality, creativity and personalized service. Every project we undertake is approached with meticulous attention to detail, ensuring that the end result exceeds expectations.</span>
+				<b>Το ταξίδι μας στην τρισδιάστατη εκτύπωση:</b>
+				 Αυτό που ξεκίνησε ως χόμπι έχει εξελιχθεί σε μια αφοσιωμένη επιδίωξη αριστείας στη δημιουργία περίπλοκων και καινοτόμων έργων.
+				<br><b>Γιατί η τρισδιάστατη εκτύπωση έχει σημασία:</b>
+				 Σε έναν κόσμο που καθοδηγείται από την καινοτομία, η τρισδιάστατη εκτύπωση βρίσκεται στην πρώτη γραμμή των τεχνολογικών εξελίξεων. Μας επιτρέπει να γεφυρώσουμε το χάσμα μεταξύ φαντασίας και δημιουργίας, μετατρέποντας τις έννοιες σε φυσικά αντικείμενα με ακρίβεια και λεπτομέρεια.
+				<br><b>Η δέσμευσή μας:</b>
+				 Αυτό που μας κάνει να ξεχωρίζουμε είναι η δέσμευσή μας στην ποιότητα, τη δημιουργικότητα και την εξατομικευμένη εξυπηρέτηση. Κάθε έργο που αναλαμβάνουμε προσεγγίζεται με σχολαστική προσοχή στη λεπτομέρεια, διασφαλίζοντας ότι το τελικό αποτέλεσμα ξεπερνά τις προσδοκίες.
+			</span>
+			<span lang="en">
+				<b>Our journey into 3D printing:</b>
+				 What started as a hobby has evolved into a dedicated pursuit of excellence in creating complex and innovative projects.
+				<br><b>Why 3D printing matters:</b>
+				 In a world driven by innovation, 3D printing is at the forefront of technological advances. It allows us to bridge the gap between imagination and creation, turning concepts into physical objects with precision and detail.
+				<br><b>Our commitment:</b>
+				 What sets us apart is our commitment to quality, creativity and personalized service. Every project we undertake is approached with meticulous attention to detail, ensuring that the end result exceeds expectations.</span>
           </p>
 
           <div class="btn-group">
@@ -323,13 +266,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
       </section>
 
-
-
-
-
-      <!-- 
-        - #SKILLS
-      -->
+      <!-- #SKILLS -->
 
       <section class="skills" id="skills">
 
@@ -350,13 +287,11 @@ What sets us apart is our commitment to quality, creativity and personalized ser
             <span lang="gr"><b><button class="toggle-btn active" data-toggle-btn>ΓΝΩΣΕΙΣ</button></b></span>
 			<span lang="en"><button class="toggle-btn active" data-toggle-btn>Our Skills </button></span>
 			
-		            <span lang="gr"><b><button class="toggle-btn" data-toggle-btn>ΕΡΓΑΛΕΙΑ</button></b></span>
+		    <span lang="gr"><b><button class="toggle-btn" data-toggle-btn>ΕΡΓΑΛΕΙΑ</button></b></span>
 			<span lang="en"><button class="toggle-btn" data-toggle-btn> Our Tools </button></span>
-
-            
+          
           </div>
-
-        </div>
+         </div>
 
         <div class="skills-box" data-skills-box>
 
@@ -496,8 +431,6 @@ What sets us apart is our commitment to quality, creativity and personalized ser
               </div>
             </li>
 
-
-
 			<li>
               <div class="skill-card">
                 <div class="tooltip">Blender</div>
@@ -538,8 +471,6 @@ What sets us apart is our commitment to quality, creativity and personalized ser
               </div>
             </li>
 
-          
-
             <li>
               <div class="skill-card">
                 <div class="tooltip">Cura</div>
@@ -559,8 +490,6 @@ What sets us apart is our commitment to quality, creativity and personalized ser
                 </div>
               </div>
             </li>
-
-        
 
             <li>
               <div class="skill-card">
@@ -618,13 +547,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
       </section>
 
-
-
-
-
-      <!-- 
-        - #PROJECTS
-      -->
+      <!-- #PROJECTS -->
 
       <section class="project" id="portfolio">
 
@@ -651,7 +574,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
             <a class="project-card">
 
               <figure class="card-banner">
-                <img src="./assets//portfolio/carabiner.jpeg" class="w-100" alt="">
+                <img src="./assets//portfolio/carabiner.jpeg" class="w-100"  >
               </figure>
 
               <div class="card-content">
@@ -668,7 +591,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
             <a class="project-card">
 
               <figure class="card-banner">
-                <img src="./assets/portfolio/toolkit.jpeg" class="w-100" alt="">
+                <img src="./assets/portfolio/toolkit.jpeg" class="w-100"  >
               </figure>
 
               <div class="card-content">
@@ -686,7 +609,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/sdcard.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -704,7 +627,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/watchstand.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -722,7 +645,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/cord.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -740,7 +663,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/pen.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -758,7 +681,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/fume.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -776,7 +699,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/lenshood.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -794,7 +717,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/vstrom.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -812,7 +735,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/penholder.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -830,7 +753,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/soapholder.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -848,7 +771,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/phonestand.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -866,7 +789,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
               <figure class="card-banner">
                 <img src="./assets/portfolio/3dpc.jpeg" class="w-100"
-                  alt="">
+                   >
               </figure>
 
               <div class="card-content">
@@ -887,13 +810,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
       </section>
 
-
-
-
-
-      <!-- 
-        - #CONTACT
-      -->
+      <!-- #CONTACT -->
 
       <section class="contact" id="contact">
 
@@ -963,9 +880,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
               </div>
 
             </li>
-
-            
-				
+			
 				<li class="contact-list-item">
 
               <div class="contact-item-icon">
@@ -1144,9 +1059,7 @@ What sets us apart is our commitment to quality, creativity and personalized ser
 
 
 
-  <!-- 
-    - #FOOTER
-  -->
+<!-- #FOOTER -->
 
   <footer class="footer">
     <div class="container">
