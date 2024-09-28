@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Italy 2023</title>
 
-    <!-- Google Fonts for Title and Slogan -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Title and Quote -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -72,43 +72,30 @@
             }
         }
 
-        /* Title Styling */
         .password-prompt h1 {
-            font-family: 'Roboto Slab', serif;
+            font-family: 'Raleway', sans-serif;
             font-weight: 700;
-            font-size: 2.5rem; /* Base size for title */
+            font-size: 2.2rem;
             margin-bottom: 20px;
             color: #E4C1F9; /* Pastel touch for title */
         }
 
-        /* Harmonized Slogan with pastel colors, responsive size, always smaller than title */
-        .slogan-box {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.2rem; /* Fixed smaller size relative to title */
-            color: #A9DEF9; /* Soft pastel blue */
-            background-color: rgba(255, 255, 255, 0.1); /* Harmonizing background box */
-            padding: 10px 20px;
-            border-radius: 10px;
-            white-space: nowrap; /* Prevent line break */
-            display: inline-block; /* Inline block to fit content */
+        /* New Slogan */
+        .password-prompt .quote {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            font-style: italic;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Input and Button same size */
-        .password-prompt input,
-        .password-prompt button {
-            width: 100%;
-            max-width: 300px; /* Same max-width for both */
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            color: #d6d6d6;
         }
 
         .password-prompt input {
+            padding: 10px;
             font-size: 1rem;
             border: none;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
         }
@@ -119,17 +106,20 @@
         }
 
         .password-prompt button {
-            background: linear-gradient(135deg, #FF9A8B, #FFC3A0); /* Soft pastel gradient */
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #A9DEF9, #C3BEF0); /* Pastel gradient for the button */
             border: none;
             color: black;
             font-size: 1rem;
             font-weight: bold;
+            border-radius: 5px;
+            width: 100%;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .password-prompt button:hover {
-            background: linear-gradient(135deg, #FFC3A0, #FF9A8B);
+            background: linear-gradient(135deg, #C3BEF0, #A9DEF9);
             transform: translateY(-3px);
         }
 
@@ -150,7 +140,7 @@
         .container h1 {
             font-family: 'Roboto Slab', serif;
             font-weight: 700;
-            font-size: 2.5rem; /* Base size for title */
+            font-size: 2.5rem; /* Responsive size */
             letter-spacing: 1px;
             margin-bottom: 20px;
             color: #E4C1F9; /* Pastel touch for title */
@@ -204,11 +194,7 @@
             }
 
             .password-prompt h1 {
-                font-size: 2rem; /* Responsive title */
-            }
-
-            .slogan-box {
-                font-size: 1.4rem; /* Ensure slogan is smaller */
+                font-size: 1.8rem; /* Responsive login heading */
             }
 
             .container p {
@@ -231,10 +217,6 @@
 
             .password-prompt h1 {
                 font-size: 1.6rem; /* Smaller login heading */
-            }
-
-            .slogan-box {
-                font-size: 1.1rem; /* Always smaller than the title */
             }
 
             .container h1 {
@@ -275,7 +257,7 @@
     <!-- Cool Password Prompt -->
     <div class="password-prompt">
         <h1>Welcome to Nomik Space</h1>
-        <div class="slogan-box">Lock it. Share it. Own it.</div> <!-- Slogan in harmonizing background box -->
+        <p class="quote">"Lock it. Share it. Own it."</p> <!-- New slogan -->
         <input type="password" id="password" placeholder="Enter password">
         <button onclick="checkPassword()">Submit</button>
     </div>
@@ -291,7 +273,7 @@
         </div>
         
         <div class="card">
-            <h2>Public Photos</h2>
+            <h2>Public Photos</h2> <!-- Public Photos added back -->
             <a href="https://we.tl/t-t6npyh5JH1" class="download-btn" target="_blank">Download</a>
         </div>
 
