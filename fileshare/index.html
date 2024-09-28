@@ -96,13 +96,19 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        .password-prompt input {
+        /* Input and Button same size */
+        .password-prompt input,
+        .password-prompt button {
+            width: 100%;
+            max-width: 300px; /* Same max-width for both */
             padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .password-prompt input {
             font-size: 1rem;
             border: none;
-            border-radius: 5px;
-            width: 100%;
-            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
         }
@@ -113,14 +119,11 @@
         }
 
         .password-prompt button {
-            padding: 10px 20px;
             background: linear-gradient(135deg, #FF9A8B, #FFC3A0); /* Soft pastel gradient */
             border: none;
             color: black;
             font-size: 1rem;
             font-weight: bold;
-            border-radius: 5px;
-            width: 100%;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
         }
