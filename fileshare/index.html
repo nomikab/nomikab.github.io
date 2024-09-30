@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, #2b2d42, #414e63); /* Darker gradient background */
             background-size: 400% 400%;
             animation: gradientAnimation 10s ease infinite;
@@ -38,19 +38,6 @@
             100% {
                 background-position: 0% 50%;
             }
-        }
-
-        /* Floating Particles */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: inherit;
-            z-index: -1;
-            filter: blur(20px);
         }
 
         /* Password prompt styling */
@@ -76,36 +63,33 @@
             }
         }
 
-        /* Title Styling */
         .password-prompt h1 {
             font-family: 'Roboto Slab', serif;
             font-weight: 700;
-            font-size: 2.5rem; /* Base size for title */
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #E4C1F9; /* Pastel touch for title */
+            color: #E4C1F9;
         }
 
-        /* Harmonized Slogan with pastel colors, responsive size, always smaller than title */
         .slogan-box {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 1.2rem; /* Fixed smaller size relative to title */
-            color: #A9DEF9; /* Soft pastel blue */
-            background-color: rgba(255, 255, 255, 0.1); /* Harmonizing background box */
+            font-size: 1.2rem;
+            color: #A9DEF9;
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 10px 20px;
             border-radius: 10px;
-            white-space: nowrap; /* Prevent line break */
-            display: inline-block; /* Inline block to fit content */
-            margin-bottom: 30px; /* More space below the slogan */
+            white-space: nowrap;
+            display: inline-block;
+            margin-bottom: 30px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        /* Input and Button Styling */
         .password-prompt input,
         .password-prompt button {
             width: 100%;
-            max-width: 300px; /* Same max-width for both */
-            padding: 12px; /* Slightly increased padding for balance */
+            max-width: 300px;
+            padding: 12px;
             border-radius: 5px;
         }
 
@@ -114,7 +98,7 @@
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
-            margin-bottom: 25px; /* Increased margin for more space */
+            margin-bottom: 25px;
         }
 
         .password-prompt input:focus {
@@ -123,14 +107,14 @@
         }
 
         .password-prompt button {
-            background: linear-gradient(135deg, #FF9A8B, #FFC3A0); /* Soft pastel gradient */
+            background: linear-gradient(135deg, #FF9A8B, #FFC3A0);
             border: none;
             color: black;
             font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
-            margin-top: 10px; /* Added space above the button */
+            margin-top: 10px;
         }
 
         .password-prompt button:hover {
@@ -138,9 +122,8 @@
             transform: translateY(-3px);
         }
 
-        /* Content for main page after login */
         .container {
-            display: none; /* Hide content initially */
+            display: none;
             text-align: center;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.2);
@@ -148,17 +131,15 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
             margin-top: 20px;
-            max-width: 90%; /* Limit width for smaller screens */
+            max-width: 90%;
         }
 
-        /* Title with secure-looking font (Roboto Slab) */
         .container h1 {
             font-family: 'Roboto Slab', serif;
             font-weight: 700;
-            font-size: 2.5rem; /* Base size for title */
-            letter-spacing: 1px;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #E4C1F9; /* Pastel touch for title */
+            color: #E4C1F9;
         }
 
         .container p {
@@ -193,83 +174,102 @@
             background-color: #ff4b4b;
         }
 
+        .lock-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            margin-top: 20px;
+            max-width: 90%;
+            font-size: 1.5rem;
+            color: #E4C1F9;
+        }
+
         footer {
             margin-top: 20px;
             color: #ffffff;
         }
 
-        /* Media Queries for Mobile Responsiveness */
         @media (max-width: 768px) {
             .password-prompt {
-                width: 90%; /* Full width on smaller devices */
+                width: 90%;
             }
 
             .container h1 {
-                font-size: 2rem; /* Smaller title on mobile */
+                font-size: 2rem;
             }
 
             .password-prompt h1 {
-                font-size: 2rem; /* Responsive title */
+                font-size: 2rem;
             }
 
             .slogan-box {
-                font-size: 1.4rem; /* Ensure slogan is smaller */
+                font-size: 1.4rem;
             }
 
             .container p {
-                font-size: 0.9rem; /* Smaller paragraph text */
+                font-size: 0.9rem;
             }
 
             .card {
-                padding: 15px; /* Adjust card padding for mobile */
+                padding: 15px;
             }
 
             .download-btn {
-                font-size: 0.9rem; /* Smaller button text */
+                font-size: 0.9rem;
             }
         }
 
         @media (max-width: 480px) {
             .password-prompt {
-                width: 100%; /* Full width on very small screens */
+                width: 100%;
             }
 
             .password-prompt h1 {
-                font-size: 1.6rem; /* Smaller login heading */
+                font-size: 1.6rem;
             }
 
             .slogan-box {
-                font-size: 1.1rem; /* Always smaller than the title */
+                font-size: 1.1rem;
             }
 
             .container h1 {
-                font-size: 1.8rem; /* Smaller title on very small screens */
+                font-size: 1.8rem;
             }
 
             .download-btn {
-                padding: 8px 15px; /* Adjust button size on mobile */
+                padding: 8px 15px;
             }
         }
     </style>
     <script>
-        // Function to check password and show content
         function checkPassword() {
             var password = document.getElementById("password").value;
-            var correctPassword = "chrysa2024"; // Updated password
+            var correctPassword = "chrysa2024";
+            var currentDate = new Date();
+            var lockDate = new Date("2024-10-02");
+
             if (password === correctPassword) {
-                document.querySelector(".password-prompt").style.display = "none"; // Hide password prompt
-                document.querySelector(".container").style.display = "block"; // Show content
+                if (currentDate > lockDate) {
+                    document.querySelector(".password-prompt").style.display = "none";
+                    document.querySelector(".lock-message").style.display = "block"; // Show lock message
+                } else {
+                    document.querySelector(".password-prompt").style.display = "none";
+                    document.querySelector(".container").style.display = "block"; // Show content
+                }
             } else {
                 alert("Incorrect password, please try again.");
             }
         }
 
-        // Allow 'Enter' key to submit the form
         document.addEventListener("DOMContentLoaded", function () {
             var input = document.getElementById("password");
             input.addEventListener("keydown", function (event) {
                 if (event.key === "Enter") {
-                    checkPassword(); // Trigger checkPassword on Enter
+                    checkPassword();
                 }
             });
         });
@@ -277,17 +277,17 @@
 </head>
 <body>
 
-    <!-- Cool Password Prompt -->
+    <!-- Password Prompt -->
     <div class="password-prompt">
         <h1>Welcome to Nomik Space</h1>
-        <div class="slogan-box">Lock it. Share it. Own it.</div> <!-- Slogan in harmonizing background box -->
+        <div class="slogan-box">Lock it. Share it. Own it.</div>
         <input type="password" id="password" placeholder="Enter password">
         <button onclick="checkPassword()">Submit</button>
     </div>
 
-    <!-- Protected Content (Main Page) -->
+    <!-- Protected Content -->
     <div class="container">
-        <h1>Italy 2023</h1> <!-- Updated title with secure-looking font -->
+        <h1>Italy 2023</h1>
         <p>Sharing files with peace of mind and unmatched security</p>
         
         <div class="card">
@@ -303,6 +303,11 @@
         <footer>
             <p><strong>3DPrintCraft</strong> &copy; 2024</p>
         </footer>
+    </div>
+
+    <!-- Lock Message -->
+    <div class="lock-message">
+        <p>The administrator locked the content because the links expired.</p>
     </div>
 
 </body>
