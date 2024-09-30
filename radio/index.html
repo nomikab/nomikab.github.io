@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Flavors</title>
+  <style>
+    /* Importing a more delicate calligraphy font */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(120deg, #f0e4d7, #c1c8e4);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Horizontally centers the content */
+      justify-content: flex-start; /* Aligns content to the top */
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #6e87d2;
+      font-family: 'Great Vibes', cursive; /* Delicate calligraphy font */
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .player-container {
+      width: 90%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .player-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #4a6f91;
+      text-align: center;
+    }
+
+    audio {
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    /* Responsive Text */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Background particles */
+    .background-circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      animation: moveCircle 20s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes moveCircle {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.2);
+      }
+    }
+
+    /* Generating multiple circles */
+    .circle:nth-child(1) {
+      width: 150px;
+      height: 150px;
+      top: 10%;
+      left: 5%;
+      animation-duration: 25s;
+    }
+    .circle:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 20%;
+      animation-duration: 22s;
+    }
+    .circle:nth-child(3) {
+      width: 120px;
+      height: 120px;
+      top: 30%;
+      right: 10%;
+      animation-duration: 18s;
+    }
+    .circle:nth-child(4) {
+      width: 100px;
+      height: 100px;
+      bottom: 20%;
+      left: 40%;
+      animation-duration: 15s;
+    }
+    .circle:nth-child(5) {
+      width: 250px;
+      height: 250px;
+      top: 40%;
+      right: 20%;
+      animation-duration: 28s;
+    }
+    .circle:nth-child(6) {
+      width: 180px;
+      height: 180px;
+      bottom: 10%;
+      right: 5%;
+      animation-duration: 30s;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="background-circles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <h1>My Flavors</h1>
+
+  <div class="container">
+    <!-- Radio Player 1 -->
+    <div class="player-container">
+      <h2>Pepper 96.6</h2>
+      <audio id="player1" controls>
+        <source src="https://netradio.live24.gr/pepper9660" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Radio Player 2 - Vanilla Smooth Flavors -->
+    <div class="player-container">
+      <h2>Vanilla Smooth Flavors</h2>
+      <audio id="player2" controls>
+        <source src="https://smooth.vanillaradio.com:8006/live" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Radio Player 3 -->
+ 
+
+  <script>
+    // Get all audio players
+    const players = document.querySelectorAll('audio');
+
+    // Add event listeners to each player
+    players.forEach(player => {
+      player.addEventListener('play', () => {
+        // Pause all other players when one starts playing
+        players.forEach(p => {
+          if (p !== player) {
+            p.pause();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
