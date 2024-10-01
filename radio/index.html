@@ -243,6 +243,13 @@
     }
 }
 
+/* Make the station logos match the height of the title font */
+.station-logo {
+  height: 1em;  /* Make the image height equal to the font size */
+  vertical-align: middle;  /* Align with the text */
+  margin-right: 10px;  /* Add some space between the logo and the title */
+}
+
   </style>
   
   <script>
@@ -250,6 +257,36 @@
     window.scrollTo(0, 0);
   }
 </script>
+
+<style>
+/* Flexbox layout for player content */
+.player-content {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Logo to the left */
+.station-logo {
+  height: 50px; /* Adjust the height to match the title */
+  margin-right: 20px; /* Spacing between the logo and the content */
+}
+
+/* Title and audio controls */
+.title-and-audio {
+  flex-grow: 1; /* Title and audio take up the rest of the space */
+}
+
+.title-and-audio h2 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+}
+</style>
+
 </head>
 <body>
   <div class="background-circles">
@@ -268,7 +305,9 @@
   <div class="container">
     <!-- Radio Player 1 -->
     <div class="player-container">
-      <h2>Pepper 96.6</h2>
+      <h2>
+    <img src="pepper-logo.jpg" alt="" class="station-logo"> Pepper 96.6
+  </h2>
       <audio id="player1" preload="metadata" controls>
         <source src="https://netradio.live24.gr/pepper9660" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -277,7 +316,9 @@
 
     <!-- Radio Player 2 - Music Art Club -->
     <div class="player-container">
-      <h2>Music Art Club</h2>
+      <h2>
+    <img src="musicartclub.png" alt="" class="station-logo"> Music Art Club
+  </h2>
       <audio id="player2" preload="metadata" controls>
         <source src="https://eu9.fastcast4u.com/proxy/musicart?mp=/1" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -286,7 +327,9 @@
 
     <!-- Radio Player 3 - Vanilla Smooth Flavors -->
     <div class="player-container">
-      <h2>Vanilla Smooth Flavors</h2>
+     <h2>
+    <img src="vanilla.png" alt="" class="station-logo"> Vanilla Smooth Flavors
+  </h2>
       <audio id="player3" preload="metadata"  controls>
         <source src="https://smooth.vanillaradio.com:8006/live" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -295,7 +338,9 @@
 	
 	    <!-- Radio Player 3 - Vanilla Fresh Flavors -->
     <div class="player-container">
-      <h2>Vanilla Fresh Flavors</h2>
+      <h2>
+    <img src="vanilla.png" alt="" class="station-logo"> Vanilla Fresh Flavors
+  </h2>
       <audio id="player4" preload="metadata" controls>
         <source src="https://fresh.vanillaradio.com:8009/live" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -304,7 +349,9 @@
 
     <!-- Radio Player 4 - Radio Paradise -->
     <div class="player-container">
-      <h2>Radio Paradise</h2>
+        <h2>
+    <img src="paradise.png" alt="" class="station-logo"> Radio Paradise
+  </h2>
       <audio id="player5" preload="metadata" controls>
         <source src="https://stream.radioparadise.com/mp3-320" type="audio/mpeg">
         Your browser does not support the audio element.
