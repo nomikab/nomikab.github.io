@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Italy 2023</title>
+    <title>Nomik Space</title>
 
     <!-- Google Fonts for Title and Slogan -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
@@ -88,78 +88,30 @@
             transform: translateY(-3px);
         }
 
-        /* Content container for the card */
-        .container {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-            margin-top: 20px;
-            max-width: 90%;
-        }
-
-        .container h1 {
-            font-family: 'Roboto Slab', serif;
-            font-weight: 700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #E4C1F9;
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            color: white;
-        }
-
-        .download-btn {
-            padding: 10px 20px;
-            background-color: #ff6b6b;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #ff4b4b;
-        }
-
-        footer {
-            margin-top: 20px;
-            color: #ffffff;
-        }
-
     </style>
+
+    <!-- Include SHA1 library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
     <script>
-        // Function to check password and show content
-        function checkPassword() {
-            var password = document.getElementById("password").value;
-            var correctPassword = "chrysa2024"; // Updated password
-            if (password === correctPassword) {
-                document.querySelector(".protected").style.display = "none";
-                document.querySelector(".container").style.display = "block"; // Show content
+        function login() {
+            var inputPassword = document.getElementById("password").value;
+            var hash = sha1(inputPassword);
+            var correctHash = "e438e1a66093015226cd3d301754cd4ebbfdb958"; // SHA-1 hash of "alex135"
+
+            if (hash === correctHash) {
+                // Redirect to the hash URL
+                window.location.href = "#" + correctHash;
             } else {
                 alert("Incorrect password, please try again.");
             }
         }
 
-        // Allow 'Enter' key to submit the form
-        document.addEventListener("DOMContentLoaded", function () {
+        // Allow 'Enter' key to trigger login
+        document.addEventListener("DOMContentLoaded", function() {
             var input = document.getElementById("password");
-            input.addEventListener("keydown", function (event) {
+            input.addEventListener("keydown", function(event) {
                 if (event.key === "Enter") {
-                    checkPassword();
+                    login();
                 }
             });
         });
@@ -171,22 +123,7 @@
     <div class="protected">
         <h1>Welcome to Nomik Space</h1>
         <input id="password" type="password" placeholder="Enter password">
-        <button onclick="checkPassword()">Submit</button>
-    </div>
-
-    <!-- Protected Content (Main Page) -->
-    <div class="container">
-        <h1>Italy 2023</h1>
-        <p>Sharing files with peace of mind and unmatched security</p>
-        
-        <div class="card">
-            <h2>Alexis Bachras</h2>
-            <a href="https://we.tl/t-QtgTRvRg1i" class="download-btn" target="_blank">Download</a>
-        </div>
-
-        <footer>
-            <p><strong>3DPrintCraft</strong> &copy; 2024</p>
-        </footer>
+        <button onclick="login()">Submit</button>
     </div>
 
 </body>
