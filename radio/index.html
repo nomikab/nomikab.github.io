@@ -40,21 +40,27 @@
     }
 
     .player-container {
-      width: 90%;
+      width: 94%;
       max-width: 700px;
       background: rgba(255, 255, 255, 0.8);
       border-radius: 20px;
+	  border: 1px solid #bcbcbc;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       margin: 10px 0;
       padding: 15px;
+	  padding-top: 0px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       backdrop-filter: blur(10px);
     }
 
     .player-container:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+       transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     }
+	
+	.player-progress div {
+    transition: width 0.2s ease, background-color 0.3s ease;
+}
 
     h2 {
       font-size: 1.8rem;
@@ -238,7 +244,7 @@
 	    <!-- Radio Player 3 - Vanilla Fresh Flavors -->
     <div class="player-container">
       <h2>Vanilla Fresh Flavors</h2>
-      <audio id="player3" controls>
+      <audio id="player4" controls>
         <source src="https://fresh.vanillaradio.com:8009/live" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -247,7 +253,7 @@
     <!-- Radio Player 4 - Radio Paradise -->
     <div class="player-container">
       <h2>Radio Paradise</h2>
-      <audio id="player4" controls>
+      <audio id="player5" controls>
         <source src="https://stream.radioparadise.com/mp3-320" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
