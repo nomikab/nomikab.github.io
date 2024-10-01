@@ -4,9 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3DPrintCraft's Flavors</title>
+  
+  
   <style>
     /* Importing a more delicate calligraphy font */
     @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap%27');
+
+	.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 24px;
+  height: 24px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
     body {
       font-family: 'Open Sans', sans-serif;
@@ -164,6 +180,40 @@
     padding: 2px 0;
 }
 
+.volume-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4a6f91;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4a6f91;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-button {
+  transition: transform 0.2s ease;
+}
+
+.control-button:active {
+  transform: scale(0.9);
+}
 
 /* Specific styles for mobile devices */
 @media (max-width: 768px) {
@@ -217,7 +267,7 @@
     <!-- Radio Player 1 -->
     <div class="player-container">
       <h2>Pepper 96.6</h2>
-      <audio id="player1" controls>
+      <audio id="player1" preload="metadata" controls>
         <source src="https://netradio.live24.gr/pepper9660" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -226,7 +276,7 @@
     <!-- Radio Player 2 - Music Art Club -->
     <div class="player-container">
       <h2>Music Art Club</h2>
-      <audio id="player2" controls>
+      <audio id="player2" preload="metadata" controls>
         <source src="https://eu9.fastcast4u.com/proxy/musicart?mp=/1" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -235,7 +285,7 @@
     <!-- Radio Player 3 - Vanilla Smooth Flavors -->
     <div class="player-container">
       <h2>Vanilla Smooth Flavors</h2>
-      <audio id="player3" controls>
+      <audio id="player3" preload="metadata"  controls>
         <source src="https://smooth.vanillaradio.com:8006/live" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -244,7 +294,7 @@
 	    <!-- Radio Player 3 - Vanilla Fresh Flavors -->
     <div class="player-container">
       <h2>Vanilla Fresh Flavors</h2>
-      <audio id="player4" controls>
+      <audio id="player4" preload="metadata" controls>
         <source src="https://fresh.vanillaradio.com:8009/live" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -253,7 +303,7 @@
     <!-- Radio Player 4 - Radio Paradise -->
     <div class="player-container">
       <h2>Radio Paradise</h2>
-      <audio id="player5" controls>
+      <audio id="player5" preload="metadata" controls>
         <source src="https://stream.radioparadise.com/mp3-320" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
