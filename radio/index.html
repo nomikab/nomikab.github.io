@@ -14,8 +14,8 @@
       color: #333;
       display: flex;
       flex-direction: column;
-      align-items: center; /* Horizontally centers the content */
-      justify-content: flex-start; /* Aligns content to the top */
+      align-items: center;
+      justify-content: flex-start;
       min-height: 100vh;
       padding: 20px;
       overflow-x: hidden;
@@ -24,9 +24,10 @@
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       color: #6e87d2;
-      font-family: 'Great Vibes', cursive; /* Delicate calligraphy font */
+      font-family: 'Great Vibes', cursive;
       text-align: center;
     }
 
@@ -44,8 +45,8 @@
       background: rgba(255, 255, 255, 0.8);
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      margin: 20px 0;
-      padding: 30px;
+      margin: 10px 0;
+      padding: 15px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       backdrop-filter: blur(10px);
     }
@@ -64,7 +65,7 @@
 
     audio {
       width: 100%;
-      height: 40px;
+      height: 30px;
       border-radius: 10px;
     }
 
@@ -175,17 +176,33 @@
       </audio>
     </div>
 
-    <!-- Radio Player 2 - Vanilla Smooth Flavors -->
+    <!-- Radio Player 2 - Music Art Club -->
+    <div class="player-container">
+      <h2>Music Art Club</h2>
+      <audio id="player2" controls>
+        <source src="https://eu9.fastcast4u.com/proxy/musicart?mp=/1" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Radio Player 3 - Vanilla Smooth Flavors -->
     <div class="player-container">
       <h2>Vanilla Smooth Flavors</h2>
-      <audio id="player2" controls>
+      <audio id="player3" controls>
         <source src="https://smooth.vanillaradio.com:8006/live" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
 
-    <!-- Radio Player 3 -->
- 
+    <!-- Radio Player 4 - Radio Paradise -->
+    <div class="player-container">
+      <h2>Radio Paradise</h2>
+      <audio id="player4" controls>
+        <source src="https://stream.radioparadise.com/mp3-320" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 
   <script>
     // Get all audio players
