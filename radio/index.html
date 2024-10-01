@@ -151,6 +151,32 @@
       right: 5%;
       animation-duration: 30s;
     }
+	
+	/* Default style for all devices, logo as a regular element in the flow */
+	.header {
+    text-align: center;
+    padding: 2px 0;
+}
+
+
+/* Specific styles for mobile devices */
+@media (max-width: 768px) {
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.6); /* Light white background with transparency */
+        backdrop-filter: blur(8px); /* Blurred background effect */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        z-index: 100; /* Ensures it stays on top of other content */
+        padding: 2px 0; /* Aesthetic padding */
+    }
+
+    /* Padding top for the body to avoid hidden content behind the fixed header */
+    body {
+        padding-top: 70px; /* Adjust this value based on your header's height */
+    }
+}
 
   </style>
 </head>
@@ -164,8 +190,10 @@
     <div class="circle"></div>
   </div>
 
-  <h1>My Flavors</h1>
-
+ <div class="header">
+        <h1>My Flavors</h1>
+    </div> 
+	
   <div class="container">
     <!-- Radio Player 1 -->
     <div class="player-container">
