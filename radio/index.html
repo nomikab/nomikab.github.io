@@ -64,7 +64,7 @@
       border-radius: 20px;
 	  border: 1px solid #bcbcbc;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      margin: 10px 0;
+      margin: 8px 0;
       padding: 15px;
 	  padding-top: 0px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -81,10 +81,12 @@
 }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 10px;
-      color: #4a6f91;
-      text-align: center;
+      color: #2b2b2b;
+      text-align: left;
+	  
+	  
     }
 
     audio {
@@ -280,6 +282,10 @@
 .title-and-audio h2 {
   margin: 0;
   padding-bottom: 10px;
+  width: 200px; /* Set a fixed width for all titles */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if the text is too long */
 }
 
 audio {
