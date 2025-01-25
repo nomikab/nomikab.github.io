@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uriel Iglesias Folder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #f5f7fa;
+            background-color: #f8f9fc;
             color: #333;
+            overflow-x: hidden;
         }
         .info {
             background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -22,22 +24,22 @@
             text-align: left;
             width: 90%;
             max-width: 1200px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             margin-top: 20px;
         }
         .info h1 {
             margin: 0;
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
         .info p {
             margin: 10px 0 20px;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
         .project-details {
-            font-size: 1rem;
+            font-size: 1.1rem;
             padding: 15px;
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
@@ -50,7 +52,7 @@
             background-color: #ddd;
             border-radius: 10px;
             overflow: hidden;
-            height: 30px;
+            height: 35px;
             width: 100%;
             max-width: 600px;
             position: relative;
@@ -58,25 +60,20 @@
         .progress-bar-inner {
             height: 100%;
             background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            width: 60%; /* Example progress */
+            width: 100%;
             border-radius: 10px 0 0 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        .last-edited {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
         }
         .iframe-container {
             margin: 20px;
             width: 90%;
             max-width: 1200px;
-            height: 80vh;
+            height: 50vh;
             border: none;
             border-radius: 15px;
             overflow: hidden;
@@ -87,6 +84,17 @@
             height: 100%;
             border: none;
         }
+        @media (max-width: 768px) {
+            .info h1 {
+                font-size: 2rem;
+            }
+            .info p {
+                font-size: 1rem;
+            }
+            .progress-bar-inner {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,13 +103,12 @@
         <p>Here you can access the files you need. Please do not share this link without permission.</p>
         <div class="project-details">
             <p><strong>Project Name:</strong> 5 x Keychains</p>
-            <p><strong>Payment Status:</strong> PAID </p>
-            <p><strong>Total Price:</strong> 15 € </p>
+            <p><strong>Payment Status:</strong> PAID</p>
+            <p><strong>Total Price:</strong> 15 €</p>
         </div>
         <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 100%" >5/5 Keychains Ready</div>
+            <div class="progress-bar-inner">5/5 Keychains Ready</div>
         </div>
-       <!-- <p class="last-edited">Last edited: 25/1/2025 13:30</p> -->
     </div>
     <div class="iframe-container">
         <iframe src="https://drive.google.com/embeddedfolderview?id=1oRfRU7WcgceSG1X2cUmfyuwluoOAT0vb#list"></iframe>
