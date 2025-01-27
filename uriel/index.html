@@ -162,14 +162,17 @@
 </script>
 
 <script>
-    const reloadButton = document.getElementById('reloadIframeButton');
-    const gdriveIframe = document.getElementById('gdriveIframe');
+const reloadButton = document.getElementById('reloadIframeButton');
+const gdriveIframe = document.getElementById('gdriveIframe');
 
-    reloadButton.addEventListener('click', () => {
-        const currentSrc = gdriveIframe.src; // Get the current src of the iframe
-        gdriveIframe.src = ''; // Clear the src
-        gdriveIframe.src = currentSrc; // Reassign the same src to reload
-    });
+reloadButton.addEventListener('click', () => {
+    if (gdriveIframe.contentWindow) {
+        gdriveIframe.contentWindow.location.reload(); // Reload the iframe without clearing the src
+    } else {
+        const currentSrc = gdriveIframe.src;
+        gdriveIframe.src = currentSrc; // Fallback for browsers that do not support contentWindow
+    }
+});
 </script>
 
 
