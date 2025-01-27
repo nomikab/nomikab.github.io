@@ -108,7 +108,7 @@
             border: 3px;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 			
         }
     </style>
@@ -130,11 +130,21 @@
 
     </div>
 	 <p><i class="fa fa-info-circle"></i> <strong>Current Status:</strong> DELIVERED</p>
-	 <button id="toggleIframeButton" style="margin: 20px; padding: 10px 20px; border: none; background-color: #6a11cb; color: #fff; border-radius: 5px; cursor: pointer;">
-    View Files
-</button>
+	 
+	 
+
+	<div style="display: flex; gap: 10px; margin: 20px;">
+    <button id="toggleIframeButton" style="padding: 10px 20px; border: none; background-color: #6a11cb; color: #fff; border-radius: 5px; cursor: pointer;">
+        View Files
+    </button>
+
+    <button id="reloadIframeButton" style="padding: 10px 20px; border: none; background-color: #6a11cb; color: #fff; border-radius: 5px; cursor: pointer;">
+        Reload Files
+    </button>
+</div>
+
     <div class="iframe-container" id="iframeContainer" style="display: none;">
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1oRfRU7WcgceSG1X2cUmfyuwluoOAT0vb#list"></iframe>
+    <iframe id="gdriveIframe" src="https://drive.google.com/embeddedfolderview?id=1oRfRU7WcgceSG1X2cUmfyuwluoOAT0vb#list"></iframe>
 </div>
 <script>
     const toggleButton = document.getElementById('toggleIframeButton');
@@ -150,5 +160,18 @@
         }
     });
 </script>
+
+<script>
+    const reloadButton = document.getElementById('reloadIframeButton');
+    const gdriveIframe = document.getElementById('gdriveIframe');
+
+    reloadButton.addEventListener('click', () => {
+        const currentSrc = gdriveIframe.src; // Get the current src of the iframe
+        gdriveIframe.src = ''; // Clear the src
+        gdriveIframe.src = currentSrc; // Reassign the same src to reload
+    });
+</script>
+
+
 </body>
 </html>
