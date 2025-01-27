@@ -104,7 +104,7 @@
             margin: 14px;
             width: 90%;
             max-width: 1200px;
-            height: 50vh;
+            height: 60vh;
             border: 3px;
             border-radius: 15px;
             overflow: hidden;
@@ -130,8 +130,25 @@
 
     </div>
 	 <p><i class="fa fa-info-circle"></i> <strong>Current Status:</strong> DELIVERED</p>
-    <div class="iframe-container">
-        <iframe src="https://drive.google.com/embeddedfolderview?id=1oRfRU7WcgceSG1X2cUmfyuwluoOAT0vb#list"></iframe>
-    </div>
+	 <button id="toggleIframeButton" style="margin: 20px; padding: 10px 20px; border: none; background-color: #6a11cb; color: #fff; border-radius: 5px; cursor: pointer;">
+    View Files
+</button>
+    <div class="iframe-container" id="iframeContainer" style="display: none;">
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1oRfRU7WcgceSG1X2cUmfyuwluoOAT0vb#list"></iframe>
+</div>
+<script>
+    const toggleButton = document.getElementById('toggleIframeButton');
+    const iframeContainer = document.getElementById('iframeContainer');
+
+    toggleButton.addEventListener('click', () => {
+        if (iframeContainer.style.display === 'none') {
+            iframeContainer.style.display = 'block';
+            toggleButton.textContent = 'Hide Files';
+        } else {
+            iframeContainer.style.display = 'none';
+            toggleButton.textContent = 'View Files';
+        }
+    });
+</script>
 </body>
 </html>
