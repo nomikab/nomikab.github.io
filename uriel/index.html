@@ -166,12 +166,11 @@ const reloadButton = document.getElementById('reloadIframeButton');
 const gdriveIframe = document.getElementById('gdriveIframe');
 
 reloadButton.addEventListener('click', () => {
-    if (gdriveIframe.contentWindow) {
-        gdriveIframe.contentWindow.location.reload(); // Reload the iframe without clearing the src
-    } else {
-        const currentSrc = gdriveIframe.src;
-        gdriveIframe.src = currentSrc; // Fallback for browsers that do not support contentWindow
-    }
+    const currentSrc = gdriveIframe.src; // Get the current src of the iframe
+    gdriveIframe.src = ''; // Temporarily clear the src
+    setTimeout(() => {
+        gdriveIframe.src = currentSrc; // Reassign the src after a small delay
+    }, 50); // Delay of 50ms
 });
 </script>
 
