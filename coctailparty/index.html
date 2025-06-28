@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Μενού Cocktail Party</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffdf8;
+      color: #333;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff2ea;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #ffd5bc;
+      z-index: 100;
+    }
+
+    header button {
+      background: none;
+      border: none;
+      color: #b14500;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    header button.active {
+      color: #fff;
+      background: #ff7a00;
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+      animation: fade 0.3s ease-in-out;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .card {
+      background: #fffaf3;
+      border-radius: 14px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(255, 122, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #e36414;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+
+    .card p {
+      margin: 6px 0;
+    }
+
+    em {
+      color: #555;
+      font-style: italic;
+    }
+
+    @media (min-width: 600px) {
+      .card {
+        max-width: 500px;
+        margin: 15px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="tab active" onclick="showSection('cocktails')">🍸 Κοκτέιλ</button>
+    <button class="tab" onclick="showSection('spirits')">🥃 Ποτά</button>
+    <button class="tab" onclick="showSection('softs')">🥤 Αναψυκτικά</button>
+  </header>
+
+  <section id="cocktails" class="section active">
+    <div class="card">
+      <h3>Gin Basil Smash</h3>
+      <ul>
+        <li>Gin</li>
+        <li>Χυμός λεμόνι</li>
+        <li>Σιρόπι ζάχαρης</li>
+        <li>10 φύλλα βασιλικού</li>
+      </ul>
+      <p><strong>Θερμίδες:</strong> ~180 kcal</p>
+      <p><strong>Επιγεύσεις:</strong> Φρέσκο, herbal, με οξύτητα</p>
+    </div>
+
+    <div class="card">
+      <h3>Seville</h3>
+      <ul>
+        <li>Gin Flor de Sevilla</li>
+        <li>Χυμός πορτοκάλι</li>
+        <li>Σιρόπι ζάχαρης</li>
+        <li>Φύλλα δυόσμου</li>
+        <li>Σόδα με άρωμα πορτοκάλι</li>
+      </ul>
+      <p><strong>Θερμίδες:</strong> ~170 kcal</p>
+      <p><strong>Επιγεύσεις:</strong> Φρουτώδες, δροσιστικό, αρωματικό</p>
+    </div>
+
+    <div class="card">
+      <h3>Watermelon Daiquiri</h3>
+      <ul>
+        <li>Λευκό Ρούμι</li>
+        <li>Χυμός καρπούζι</li>
+        <li>Χυμός lime</li>
+      </ul>
+      <p><strong>Θερμίδες:</strong> ~200 kcal</p>
+      <p><strong>Επιγεύσεις:</strong> Καλοκαιρινό, γλυκό, δροσιστικό</p>
+    </div>
+  </section>
+
+  <section id="spirits" class="section">
+    <div class="card">
+      <h3>Gin</h3>
+      <p>~97 kcal / 45ml</p>
+    </div>
+    <div class="card">
+      <h3>Gin Flor de Sevilla</h3>
+      <p><em>Με χυμό πορτοκαλιών από τη Σεβίλλη και άλλα εκλεκτά βοτανικά</em></p>
+      <p>~100 kcal / 45ml</p>
+    </div>
+    <div class="card">
+      <h3>Λευκό Ρούμι</h3>
+      <p>~98 kcal / 45ml</p>
+    </div>
+    <div class="card">
+      <h3>Μπύρα</h3>
+      <p>~150 kcal / 330ml</p>
+    </div>
+  </section>
+
+  <section id="softs" class="section">
+    <div class="card"><h3>CocaCola Zero</h3><p>~1 kcal / χρήση σε ποτό</p></div>
+    <div class="card"><h3>Schweppes Λεμόνι</h3><p>~50 kcal / χρήση σε ποτό</p></div>
+    <div class="card"><h3>Schweppes Πορτοκάλι</h3><p>~55 kcal / χρήση σε ποτό</p></div>
+    <div class="card"><h3>Schweppes Grapefruit</h3><p>~50 kcal / χρήση σε ποτό</p></div>
+    <div class="card"><h3>Σόδα</h3><p>0 kcal</p></div>
+    <div class="card"><h3>Τόνικ</h3><p>~48 kcal / χρήση σε ποτό</p></div>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
